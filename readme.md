@@ -1,5 +1,5 @@
-This is a base theme for Drupal 7, created by Jen Simmons.  
-I can't give you a unicorn, but I can give you one pony.™
+## This is a base theme for Drupal 7, created by Jen Simmons.  
+*I can't give you a unicorn, but I can give you one pony.™*
 
 
 I made this theme because I've been rolling my own Drupal theme from scratch for every new site for a while now. And I've used the same tricks over and over enough that it's time to bake them into a base theme. When you are still learning Drupal, it's best to build on top of someone else's code. Once you gain enough mastery, try creating your own theme  from scratch. I think there's real value — especially when best practices are evolving so quickly right now — in rolling your own tools, and questioning each line of code. But maybe you don't have time for that. Or maybe you want to just take a peek at what I'm thinking. Meanwhile, I am putting all of my current practices in one place to make the work I do go faster.
