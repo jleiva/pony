@@ -12,7 +12,7 @@ What I've learned is that Drupal is a total pain in the ass if you want your sit
 
 
 ## AN IMPORTANT THING YOU MUST READ ##
-_This theme REQUIRES the use of the following modules:_  
+_This theme REQUIRES the use of the following modules. REQUIRES. Your results won't be nearly as good without them. Really:_  
 Fences — http://drupal.org/project/fences  
 HTML5 Tools — http://drupal.org/project/html5_tools  
  
