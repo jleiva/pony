@@ -1,5 +1,4 @@
-This is a base theme for Drupal 7, created by Jen Simmons.
-
+This is a base theme for Drupal 7, created by Jen Simmons.  
 I can't give you a unicorn, but I can give you one pony.™
 
 
