@@ -40,7 +40,7 @@ Paul Irish
 Divya Manian  
 Ethan Marcotte  
 Eric Meyers  
-John Wilkins  
+John Albin Wilkins  
 Jeffrey Zeldman  
 for being really smart and generous, and teaching me a ton, both now and years ago. I would not know anything if it weren't for you all. 
  
