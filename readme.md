@@ -12,7 +12,7 @@ This theme is not designed to be heavily configured from the Drupal administrati
 
 ————————————————————————————————————————————————————————————————
 
-******* *AN IMPORTANT THING YOU MUST READ* ********  
+## AN IMPORTANT THING YOU MUST READ ##
 _This theme REQUIRES the use of the following modules:_  
 Fences — http://drupal.org/project/fences  
 HTML5 Tools — http://drupal.org/project/html5_tools  
