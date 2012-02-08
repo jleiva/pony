@@ -22,12 +22,14 @@ HTML5 Tools — http://drupal.org/project/html5_tools
 This theme pulls ideas and best practices from all over the web, including these projects:  
 320 and Up: http://stuffandnonsense.co.uk/projects/320andup  
 HTML5 Boilerplate: http://html5boilerplate.com  
+(insert many more here)  
 Mothership: http://drupal.org/project/mothership  
 Zen 5: http://drupal.org/project/zen  
   
 It includes code from the following libraries and projects:  
 jQuery Widow Fix: http://matthewlein.com/widowfix  
-Respond https://github.com/scottjehl/Respond  
+Respond: https://github.com/scottjehl/Respond  
+(add the rest)  
   
   
 And thanks to:  
@@ -42,5 +44,8 @@ John Wilkins
 Jeffrey Zeldman  
 for being really smart and generous, and teaching me a ton, both now and years ago. I would not know anything if it weren't for you all. 
  
+ 
+## Tools ##
+
 Tools you might want to use while building your theme include:  
 http://responsivepx.com  
