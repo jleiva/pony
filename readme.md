@@ -17,7 +17,7 @@ Fences — http://drupal.org/project/fences
 HTML5 Tools — http://drupal.org/project/html5_tools  
  
 
-### Credits ###
+## Credits ##
 
 This theme pulls ideas and best practices from all over the web, including these projects:  
 320 and Up: http://stuffandnonsense.co.uk/projects/320andup  
