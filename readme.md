@@ -12,28 +12,28 @@ This theme is not designed to be heavily configured from the Drupal administrati
 
 ====================================================================
 
-This theme pulls ideas and best practices from all over the web, including these projects:
-320 and Up: http://stuffandnonsense.co.uk/projects/320andup
-HTML5 Boilerplate: http://html5boilerplate.com
-Mothership: http://drupal.org/project/mothership
-Zen 5: http://drupal.org/project/zen
-
-It includes code from the following libraries and projects:
-jQuery Widow Fix: http://matthewlein.com/widowfix
-Respond https://github.com/scottjehl/Respond
-
-
-And thanks to:
-Dan Cederholm
-Andy Clarke
-Jeremy Keith
-Paul Irish
-Divya Manian
-Ethan Marcotte
-Eric Meyers
-John Wilkins
-Jeffrey Zeldman
-for being really smart and generous, and teaching me a ton, both now and years ago. I would not know anything if it weren't for you all.
-
-Tools you might want to use while building your theme include:
-http://responsivepx.com
+This theme pulls ideas and best practices from all over the web, including these projects:  
+320 and Up: http://stuffandnonsense.co.uk/projects/320andup  
+HTML5 Boilerplate: http://html5boilerplate.com  
+Mothership: http://drupal.org/project/mothership  
+Zen 5: http://drupal.org/project/zen  
+  
+It includes code from the following libraries and projects:  
+jQuery Widow Fix: http://matthewlein.com/widowfix  
+Respond https://github.com/scottjehl/Respond  
+  
+  
+And thanks to:  
+Dan Cederholm  
+Andy Clarke  
+Jeremy Keith  
+Paul Irish  
+Divya Manian  
+Ethan Marcotte  
+Eric Meyers  
+John Wilkins  
+Jeffrey Zeldman  
+for being really smart and generous, and teaching me a ton, both now and years ago. I would not know anything if it weren't for you all. 
+ 
+Tools you might want to use while building your theme include:  
+http://responsivepx.com  
