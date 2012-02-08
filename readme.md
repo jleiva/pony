@@ -10,14 +10,14 @@ What I know for sure is that Drupal is a total pain in the ass if you want your 
 
 This theme is not designed to be heavily configured from the Drupal administration interface. If you want a clickable interface for assigning how your responsive website will be responsive, then checkout the several themes available that can help you do that: http://drupal.org/project/themes. This theme is designed to be used by people who will be writing their own CSS, and therefore does not have all the overhead and weight of those other themes. You can use it as a parent theme for your custom-coded site, or even better, as a jumping-off point for you to hack directly to create your own codebase. Good luck! 
 
-———————————————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————————————
 
-******* AN IMPORTANT THING YOU MUST READ ********  
+******* *AN IMPORTANT THING YOU MUST READ* ********  
 _This theme REQUIRES the use of the following modules:_  
 Fences — http://drupal.org/project/fences  
 HTML5 Tools — http://drupal.org/project/html5_tools  
  
-———————————————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————————————
 
 
 This theme pulls ideas and best practices from all over the web, including these projects:  
