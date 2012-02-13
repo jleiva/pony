@@ -1,0 +1,3 @@
+[submodule "sites/all/themes/pony"]
+	path = sites/all/themes/pony
+	url = git@github.com:jensimmons/pony.git
