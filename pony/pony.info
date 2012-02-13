@@ -1,8 +1,8 @@
 name = Pony
-description = make Drupal behave
+description = Make Drupal behave.
 screenshot = images/screenshot.gif
 core = "7.x"
 project = "pony"
-engine = phptemplate
+version = "7.x-1.x-dev"
 
 stylesheets[all][] = css/drupal.css

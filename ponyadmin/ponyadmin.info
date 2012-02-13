@@ -1,7 +1,8 @@
-name = Pony Administration Theme
-description = The Seven theme, but better.
-version = "7.x-1.x-dev"
+name = Pony Administration
+description = The Seven theme, but better. It's mostly the same, yet fixes a few buggy things. Switch to it by using the drop-down menu below. 
 core = 7.x
+project = "pony"
+version = "7.x-1.x-dev"
 
 base theme  = seven
 
