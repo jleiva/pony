@@ -1,0 +1,738 @@
+<?php
+/**
+ * @file
+ * Fences is a module providing configurable field wrappers.
+ */
+
+/**
+ * Implements hook_form_alter()
+ */
+function fences_form_field_ui_field_edit_form_alter(&$form, &$form_state, $form_id){
+  $suggestion = fences_get_suggestion($form['#instance']['entity_type'], $form['#instance']['bundle'], $form['#instance']['field_name']);
+
+  $form['instance']['fences_wrapper'] = array(
+    '#type' => 'select',
+    '#title' => t('Wrapper markup'),
+    '#default_value' => $suggestion ? $suggestion : 'div',
+    '#options' => fences_get_fences_options('field'),
+    '#description' => t('Choose the HTML to use to wrap the field.'),
+  );
+}
+
+/**
+ * Returns a ready-made options list of fences suggestions.
+ */
+function fences_get_fences_options($theme_hook) {
+  $options = array();
+
+  // Get the list of suggestions.
+  $fences = fences_get_fences_suggestion_info();
+  foreach (array_keys($fences[$theme_hook]) as $key) {
+    $tags = '';
+    if ($fences[$theme_hook][$key]['element'] && $fences[$theme_hook][$key]['element'] != $fences[$theme_hook][$key]['label']) {
+      $tags = ' — <' . implode('> <', explode(' ', $fences[$theme_hook][$key]['element'])) . '>';
+    }
+    $option = $fences[$theme_hook][$key]['label'] . $tags . ' — ' . $fences[$theme_hook][$key]['description'];
+    if (empty($fences[$theme_hook][$key]['groups'])) {
+      $options[$key] = $option;
+    }
+    else {
+      foreach ($fences[$theme_hook][$key]['groups'] as $optgroup) {
+        $options[$optgroup][$key] = $option;
+      }
+    }
+  }
+
+  // Sort the option groups, but put the "no markup" option first.
+  ksort($options);
+  if ($no_wrapper = $options['no_wrapper']) {
+    unset($options['no_wrapper']);
+    $options = array('no_wrapper' => $no_wrapper) + $options;
+  }
+
+  return $options;
+}
+
+/**
+ * Returns the wrapper suggestion if it exists.
+ *
+ * @see field_info_instance()
+ *
+ * @param $entity_type
+ *   The entity type for the instance.
+ * @param $bundle_name
+ *   The bundle name for the instance.
+ * @param $field_name
+ *   The field name for the instance.
+ *
+ * @return
+ *   The fences wrapper suggestion for this field, if set.
+ */
+function fences_get_suggestion($entity_type, $bundle_name, $field_name) {
+  $fences = &drupal_static(__FUNCTION__, array());
+
+  if (!isset($fences[$entity_type][$bundle_name][$field_name])) {
+    // Instance info is cached, so this isn't as non-performant as it looks.
+    $settings = field_info_instance($entity_type, $field_name, $bundle_name);
+    $fences[$entity_type][$bundle_name][$field_name] = isset($settings['fences_wrapper']) ? $settings['fences_wrapper'] : '';
+  }
+
+  return $fences[$entity_type][$bundle_name][$field_name];
+}
+
+/**
+ * Implements hook_form_views_ui_add_item_form_alter().
+ */
+function fences_form_views_ui_add_item_form_alter(&$form, &$form_state, $form_id) {
+  // Add our own submit handler to run before the standard one.
+  array_unshift($form['buttons']['submit']['#submit'], 'fences_views_ui_add_item_form_submit');
+}
+
+/**
+ * Submit handler which runs before views_ui_add_item_form_submit().
+ */
+function fences_views_ui_add_item_form_submit($form, &$form_state) {
+  // Sanity check; this temporary property shouldn't exist before the form is
+  // submitted.
+  if (isset($form_state['view']->fences_new_fields)) {
+    unset($form_state['view']->fences_new_fields);
+  }
+  // Loop through each of the items that were checked.
+  if (!empty($form_state['values']['name']) && is_array($form_state['values']['name'])) {
+    foreach (array_keys(array_filter($form_state['values']['name'])) as $field) {
+      // Check if the checked item is a field api field.
+      if (strpos($field, 'field_data_') === 0) {
+        // Find the field's proper name.
+        list($table, $field_name) = explode('.', $field, 2);
+        if ($cut = strpos($field_name, '$')) {
+          $field_name = substr($field_name, 0, $cut);
+        }
+        // Note that the field has just been added by adding it's name to a
+        // temporary property of the view.
+        $form_state['view']->fences_new_fields[] = $field_name;
+      }
+    }
+  }
+}
+
+/**
+ * Alter the views field item form to change some of the default values.
+ *
+ * Note: we only act on an item if it is among the list of fields added to the
+ * view's fences_new_fields property in fences_views_ui_add_item_form_submit().
+ */
+function fences_form_views_ui_config_item_form_alter(&$form, &$form_state, $form_id) {
+  // Check if the current item is a field.
+  if ($form_state['type'] == 'field' && isset($form_state['view']->fences_new_fields)) {
+    if (!empty($form_state['view']->fences_new_fields)) {
+      // Check if the current item is one of the fields we marked earlier.
+      $key = array_search($form_state['id'], $form_state['view']->fences_new_fields);
+      if ($key !== FALSE) {
+        // Disable the label option.
+        $form['options']['custom_label']['#default_value'] = FALSE;
+
+        // Since we are altering this fieldset's defaults, expand it.
+        $form['options']['style_settings']['#collapsed'] = FALSE;
+
+        // Enable the element_type style to be none.
+        $form['options']['element_type_enable']['#default_value'] = TRUE;
+        $form['options']['element_type']['#default_value'] = 0;
+
+        // Enable the element_wrapper style to be none.
+        $form['options']['element_wrapper_type_enable']['#default_value'] = TRUE;
+        $form['options']['element_wrapper_type']['#default_value'] = 0;
+
+        // Disable the default element classes.
+        $form['options']['element_default_classes']['#default_value'] = FALSE;
+
+        // Set the field settings to use the field_api for rendering.
+        $form['options']['field_api_classes']['#default_value'] = TRUE;
+
+        // Remove this field from the list of items to alter.
+        unset($form_state['view']->fences_new_fields[$key]);
+      }
+    }
+    // Remove the temporary property set when we added items.
+    if (empty($form_state['view']->fences_new_fields)) {
+      unset($form_state['view']->fences_new_fields);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function fences_preprocess_field(&$variables) {
+  // Retrieve the configured suggestion.
+  $suggestion = fences_get_suggestion($variables['element']['#entity_type'], $variables['element']['#bundle'], $variables['element']['#field_name']);
+  if ($suggestion) {
+    // Make fences' suggestions low priority by placing them at the front of the queue.
+    $suggestion = 'field__fences_' . $suggestion;
+    if (count($variables['items']) > 1) {
+      // Add a "-multiple" suggestion if there are more than one field items.
+      array_unshift($variables['theme_hook_suggestions'], $suggestion . '_multiple');
+    }
+    array_unshift($variables['theme_hook_suggestions'], $suggestion);
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function fences_css_alter(&$css) {
+  // Replace the field module's CSS with our non-floating inline version.
+  $path = drupal_get_path('module', 'field') . '/theme';
+  if (isset($css[$path . '/field.css']) && $css[$path . '/field.css']['data'] == $path . '/field.css') {
+    $css[$path . '/field.css']['data'] = drupal_get_path('module', 'fences') . '/field.css';
+    if (isset($css[$path . '/field-rtl.css'])) {
+      $css[$path . '/field-rtl.css']['data'] = drupal_get_path('module', 'fences') . '/field-rtl.css';
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function fences_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'theme') {
+    // Make fences' hook_theme() run last.
+    $group = $implementations['fences'];
+    unset($implementations['fences']);
+    $implementations['fences'] = $group;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function fences_theme($existing, $type, $theme, $path) {
+  $hooks = array();
+
+  $fences = fences_get_fences_suggestion_info();
+
+  $supported_hooks = array('field');
+  foreach ($supported_hooks as $hook) {
+    foreach ($fences[$hook] as $suggestion => $data) {
+      // Manually register the suggestions for a module, but let hook_theme
+      // auto-discover theme-owned suggestions as it normally does.
+      if ($fences[$hook][$suggestion]['type'] == 'module') {
+        $hook_suggestion = $hook . '__fences_' . str_replace('-', '_', $suggestion);
+        $hook_suggestions = array($hook_suggestion);
+        // Register the "-multiple" suggestion if that template was found.
+        if ($fences[$hook][$suggestion]['multiple']) {
+          $hook_suggestions[] = $hook_suggestion . '_multiple';
+        }
+        foreach ($hook_suggestions as $name) {
+          $hooks[$name] = array(
+            'base hook'      => $hook,
+            'render element' => $existing[$hook]['render element'],
+            'type'           => $fences[$hook][$suggestion]['type'],
+            'theme path'     => $existing[$hook]['theme path'],
+            'template'       => str_replace('_', '-', $name),
+            'path'           => $fences[$hook][$suggestion]['path'],
+          );
+        }
+      }
+    }
+  }
+
+  // Register theme hook suggestions for field_collection's entity.
+  if (module_exists('entity')) {
+    $hooks['entity__fences_no_wrapper'] = array(
+      'base hook'      => 'entity',
+      'render element' => $existing['entity']['render element'],
+      'type'           => 'module',
+      'theme path'     => $existing['entity']['theme path'],
+      'function'       => 'theme_entity__fences_no_wrapper',
+    );
+  }
+
+  return $hooks;
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function fences_theme_registry_alter(&$theme_registry) {
+  $fences = fences_get_fences_suggestion_info();
+
+  // Manually registering module-based suggestions means they mistakenly get
+  // preprocess and process functions registered to them.
+  $supported_hooks = array('field');
+  foreach ($supported_hooks as $hook) {
+    foreach ($fences[$hook] as $suggestion => $data) {
+      if ($fences[$hook][$suggestion]['type'] == 'module') {
+        $hook_suggestion = $hook . '__fences_' . str_replace('-', '_', $suggestion);
+        foreach (array($hook_suggestion, $hook_suggestion . '_multiple') as $name) {
+          unset($theme_registry[$name]['preprocess functions']);
+          unset($theme_registry[$name]['process functions']);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Preprocess variables for entity.
+ */
+function fences_preprocess_entity(&$variables) {
+  if ($variables['elements']['#entity_type'] == 'field_collection_item') {
+    // Replace the default "field_collection_item" suggestion with fences'.
+    if (($pos = array_search('field_collection_item', $variables['theme_hook_suggestions'])) !== FALSE) {
+      $variables['theme_hook_suggestions'][$pos] = 'entity__fences_no_wrapper';
+    }
+  }
+}
+
+/**
+ * A "no wrapper" theme suggestion for entity.
+ */
+function theme_entity__fences_no_wrapper($variables) {
+  return drupal_render($variables['content']);
+}
+
+/**
+ * Implements hook_field_info_alter().
+ */
+function fences_field_info_alter(&$info) {
+  // Change the default formatter to be the "fields only" formatter.
+  if (isset($info['field_collection']['default_formatter'])) {
+    $info['field_collection']['default_formatter'] = 'field_collection_fields';
+  }
+}
+
+/**
+ * Retrieve the hook_fences_suggestion_info data.
+ */
+function fences_get_fences_suggestion_info() {
+  $fences = &drupal_static(__FUNCTION__);
+
+  if (is_null($fences)) {
+    $fences = $files = array();
+
+    // Call hook_fences_suggestion_info for modules. We need to search each
+    // module for template files to get their paths, so we can't use
+    // module_invoke_all().
+    foreach (module_implements('fences_suggestion_info') as $module) {
+      $function = $module . '_fences_suggestion_info';
+      if (function_exists($function)) {
+        $result = $function();
+        if (isset($result) && is_array($result)) {
+          // Search the module for template files.
+          $files[$module] = drupal_system_listing('/\-\-fences\-.*\.tpl\.php$/', drupal_get_path('module', $module), 'name', 0);
+          // Go through each of the results of hook_fences_suggestion_info().
+          foreach (array_keys($result) as $hook) {
+            foreach (array_keys($result[$hook]) as $suggestion) {
+              $template = str_replace('_', '-', $hook . '--fences-' . $suggestion) . '.tpl';
+              // Only record the suggestion if a corresponding template file is found.
+              if (isset($files[$module][$template])) {
+                $fences[$hook][$suggestion] = $result[$hook][$suggestion];
+                // We need the path and project type for hook_theme().
+                $fences[$hook][$suggestion]['path'] = dirname($files[$module][$template]->uri);
+                $fences[$hook][$suggestion]['type'] = 'module';
+                // Record if there is a "multiple-" version of the template.
+                $template = str_replace('_', '-', $hook . '--fences-' . $suggestion . '-multiple') . '.tpl';
+                $fences[$hook][$suggestion]['multiple'] = isset($files[$module][$template]) ? TRUE : FALSE;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Create a list of the default theme and its base themes.
+    $theme_default = $GLOBALS['conf']['theme_default'];
+    // We can't use list_themes() here because of #761608.
+    $theme_data = _system_rebuild_theme_data();
+    if (isset($theme_data[$theme_default]->base_themes)) {
+      foreach (array_keys($theme_data[$theme_default]->base_themes) as $base_theme) {
+        $themes[$base_theme] = 'base_theme_engine';
+      }
+    }
+    $themes[$theme_default] = 'theme_engine';
+    // Include the template.php files of the entire theme stack.
+    foreach (array_keys($themes) as $theme) {
+      $file = './' . drupal_get_path('theme', $theme) . '/template.php';
+      if (file_exists($file)) {
+        include_once $file;
+      }
+    }
+
+    // Call hook_fences_suggestion_info for themes.
+    foreach ($themes as $theme => $type) {
+      // Search the theme for template files.
+      $files[$theme] = drupal_system_listing('/\-\-fences\-.*\.tpl\.php$/', drupal_get_path('theme', $theme), 'name', 0);
+      $function = $theme . '_fences_suggestion_info';
+      if (function_exists($function)) {
+        $result = $function();
+        if (isset($result) && is_array($result)) {
+          // Go through each of the results of hook_fences_suggestion_info().
+          foreach (array_keys($result) as $hook) {
+            foreach (array_keys($result[$hook]) as $suggestion) {
+              $template = str_replace('_', '-', $hook . '--fences-' . $suggestion) . '.tpl';
+              // Only record the suggestion if a corresponding template file is found.
+              if (isset($files[$theme][$template])) {
+                $fences[$hook][$suggestion] = $result[$hook][$suggestion];
+                // We need the project type in hook_theme().
+                $fences[$hook][$suggestion]['type'] = $type;
+              }
+            }
+          }
+        }
+      }
+      // If hook_fences_suggestion_info() doesn't exist for the theme, do a
+      // "lazy" hook implementation by parsing the file names of matching
+      // template files.
+      else {
+        foreach ($files[$theme] as $template => $data) {
+          list($hook, $suggestion) = explode('--', $template);
+          $suggestion = str_replace(array('fences-', '-multiple', '.tpl'), '', $suggestion);
+          if (!isset($fences[$hook][$suggestion])) {
+            $fences[$hook][$suggestion] = array(
+              'label'       => $suggestion,
+              'element'     => $suggestion,
+              'description' => t('A <@tag> tag', array('@tag' => $suggestion)),
+              'groups'      => array(t('Provided by @theme_name', array('@theme_name', $theme))),
+              'type'        => $type,
+            );
+          }
+        }
+      }
+    }
+
+    // Allow modules and themes to alter the fences info.
+    drupal_alter('fences_suggestion_info', $fences);
+
+    foreach (array_keys($fences) as $hook) {
+      ksort($fences[$hook]);
+    }
+  }
+  return $fences;
+}
+
+/**
+ * Implements hook_fences_suggestion_info().
+ */
+function fences_fences_suggestion_info() {
+  // Suggestions for the "field" theme hook.
+  $fences['field'] = array(
+    'no_wrapper' => array(
+      'label'       => t('no markup'),
+      'element'     => '',
+      'description' => t('No wrapping HTML'),
+    ),
+    'address' => array(
+      'label'       => t('address'),
+      'element'     => 'address',
+      'description' => t('Contact information for a page or article element'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'article' => array(
+      'label'       => t('article'),
+      'element'     => 'article',
+      'description' => t('Self-contained syndicatable or reusable composition'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'aside' => array(
+      'label'       => t('aside'),
+      'element'     => 'aside',
+      'description' => t('Sidebar for tangentially related content'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'b' => array(
+      'label'       => t('bold'),
+      'element'     => 'b',
+      'description' => t('Keywords'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'bdi' => array(
+      'label'       => t('bidirectional text'),
+      'element'     => 'bdi',
+      'description' => t('Text directionality isolation'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'blockquote' => array(
+      'label'       => t('block quote'),
+      'element'     => 'blockquote',
+      'description' => t('A section quoted from another source'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'cite' => array(
+      'label'       => t('cite'),
+      'element'     => 'cite',
+      'description' => t('A citation or a reference to other sources'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'code' => array(
+      'label'       => t('code'),
+      'element'     => 'code',
+      'description' => t('Computer code'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'dl' => array(
+      'label'       => t('description list'),
+      'element'     => 'dl',
+      'description' => t('Association list consisting of name-value groups'),
+      'groups'      => array(t('List')),
+    ),
+    'dt' => array(
+      'label'       => t('description list’s term'),
+      'element'     => 'dt',
+      'description' => t('Legend for corresponding dd element(s)'),
+      'groups'      => array(t('List')),
+    ),
+    'dd' => array(
+      'label'       => t('description list’s definition'),
+      'element'     => 'dd',
+      'description' => t('Content for corresponding dt element(s)'),
+      'groups'      => array(t('List')),
+    ),
+    'del' => array(
+      'label'       => t('deletion'),
+      'element'     => 'del',
+      'description' => t('A removal from the document'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'details' => array(
+      'label'       => t('details'),
+      'element'     => 'details',
+      'description' => t('Disclosure control for hiding details'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'div' => array(
+      'label'       => t('division'),
+      'element'     => 'div',
+      'description' => t('Generic container; only use as a last resort'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'em' => array(
+      'label'       => t('emphasis'),
+      'element'     => 'em',
+      'description' => t('Stress emphasis'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'figcaption' => array(
+      'label'       => t('figure caption'),
+      'element'     => 'figcaption',
+      'description' => t('Caption for figure'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'figure' => array(
+      'label'       => t('figure'),
+      'element'     => 'figure',
+      'description' => t('Figure with optional caption'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'footer' => array(
+      'label'       => t('footer'),
+      'element'     => 'footer',
+      'description' => t('Footer for a page or section'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'h1' => array(
+      'label'       => t('heading rank 1'),
+      'element'     => 'h1',
+      'description' => t('Section heading'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'h2' => array(
+      'label'       => t('heading rank 2'),
+      'element'     => 'h2',
+      'description' => t('Section heading'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'h3' => array(
+      'label'       => t('heading rank 3'),
+      'element'     => 'h3',
+      'description' => t('Section heading'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'h4' => array(
+      'label'       => t('heading rank 4'),
+      'element'     => 'h4',
+      'description' => t('Section heading'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'h5' => array(
+      'label'       => t('heading rank 5'),
+      'element'     => 'h5',
+      'description' => t('Section heading'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'h6' => array(
+      'label'       => t('heading rank 6'),
+      'element'     => 'h6',
+      'description' => t('Section heading'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'header' => array(
+      'label'       => t('header'),
+      'element'     => 'header',
+      'description' => t('Introductory or navigational aids for a page or section'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'hgroup' => array(
+      'label'       => t('heading group'),
+      'element'     => 'hgroup',
+      'description' => t('Heading group'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'i' => array(
+      'label'       => t('italic'),
+      'element'     => 'i',
+      'description' => t('Alternate voice'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'ins' => array(
+      'label'       => t('insertion'),
+      'element'     => 'ins',
+      'description' => t('An addition to the document'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'kbd' => array(
+      'label'       => t('keyboard'),
+      'element'     => 'kbd',
+      'description' => t('User input'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'mark' => array(
+      'label'       => t('mark'),
+      'element'     => 'mark',
+      'description' => t('Highlight'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'menu' => array(
+      'label'       => t('menu'),
+      'element'     => 'menu',
+      'description' => t('Menu of commands'),
+      'groups'      => array(t('List')),
+    ),
+    'nav' => array(
+      'label'       => t('navigation'),
+      'element'     => 'nav',
+      'description' => t('Section with navigational links'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'ol' => array(
+      'label'       => t('ordered list'),
+      'element'     => 'ol',
+      'description' => t('Ordered list'),
+      'groups'      => array(t('List')),
+    ),
+    'p' => array(
+      'label'       => t('paragraph'),
+      'element'     => 'p',
+      'description' => t('Paragraph'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'pre' => array(
+      'label'       => t('preformatted text'),
+      'element'     => 'pre',
+      'description' => t('Block of preformatted text'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'pre_code' => array(
+      'label'       => t('preformatted code'),
+      'element'     => 'pre code',
+      'description' => t('Block of preformatted code'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'q' => array(
+      'label'       => t('quotation'),
+      'element'     => 'q',
+      'description' => t('Quotation'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'ruby' => array(
+      'label'       => t('ruby'),
+      'element'     => 'ruby',
+      'description' => t('Ruby annotation(s)'),
+      'groups'      => array(t('Ruby')),
+    ),
+    'rp_rt' => array(
+      'label'       => t('ruby text with parenthesis'),
+      'element'     => 'rp rt',
+      'description' => t('Ruby annotation text with surrounding parenthesis'),
+      'groups'      => array(t('Ruby')),
+    ),
+    'rt' => array(
+      'label'       => t('ruby text'),
+      'element'     => 'rt',
+      'description' => t('Ruby annotation text'),
+      'groups'      => array(t('Ruby')),
+    ),
+    's' => array(
+      'label'       => t('strikethrough'),
+      'element'     => 's',
+      'description' => t('Inaccurate text'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'samp' => array(
+      'label'       => t('sample output'),
+      'element'     => 'samp',
+      'description' => t('Computer output'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'section' => array(
+      'label'       => t('section'),
+      'element'     => 'section',
+      'description' => t('Generic document or application section'),
+      'groups'      => array(t('Sectioning')),
+    ),
+    'small' => array(
+      'label'       => t('small'),
+      'element'     => 'small',
+      'description' => t('Side comment'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'span' => array(
+      'label'       => t('span'),
+      'element'     => 'span',
+      'description' => t('Generic phrasing container'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'strong' => array(
+      'label'       => t('strong'),
+      'element'     => 'strong',
+      'description' => t('Importance'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'sub' => array(
+      'label'       => t('subscript'),
+      'element'     => 'sub',
+      'description' => t('Subscript'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'summary' => array(
+      'label'       => t('summary'),
+      'element'     => 'summary',
+      'description' => t('Caption for details'),
+      'groups'      => array(t('Block-level')),
+    ),
+    'sup' => array(
+      'label'       => t('superscript'),
+      'element'     => 'sup',
+      'description' => t('Superscript'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'u' => array(
+      'label'       => t('underline'),
+      'element'     => 'u',
+      'description' => t('Keywords'),
+      'groups'      => array(t('Phrasing')),
+    ),
+    'ul' => array(
+      'label'       => t('unordered list'),
+      'element'     => 'ul',
+      'description' => t('Unordered list'),
+      'groups'      => array(t('List')),
+    ),
+    'var' => array(
+      'label'       => t('variable'),
+      'element'     => 'var',
+      'description' => t('Variable'),
+      'groups'      => array(t('Phrasing')),
+    ),
+  );
+  return $fences;
+}
