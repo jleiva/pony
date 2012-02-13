@@ -1,0 +1,49 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\000035}}
+input.form-submit, a.button {
+  margin-right: 0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\000039}}
+form .field-multiple-table th.field-label {
+  padding-left: 10px;
+  padding-top: 4px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000317}}
+ul.tips,
+div.description,
+.form-item div.description {
+  line-height: 1.231em;
+  font-size: 0.9em;
+  color: #777;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000323}}
+.filter-guidelines {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000327}}
+.filter-wrapper {
+  color: #999;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000332}}
+.filter-wrapper label {
+  font-weight: normal;
+  margin-right: 0.7em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000336}}
+.form-wrapper div.description {
+  color: #999;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000346}}
+#overlay-content {
+  min-height: 250px;
+}
