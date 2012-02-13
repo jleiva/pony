@@ -1,8 +1,0 @@
-name = Jen's Seven
-description = Fixing some of the mess.
-version = 0.2
-core = 7.x
-
-base theme  = seven
-
-stylesheets[all][] = jenseven.css
