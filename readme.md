@@ -1,8 +1,7 @@
 ### This is a base theme for Drupal 7, created by Jen Simmons.  
 *I can't give you a unicorn, but I can give you one pony.™*
 
-(https://img.skitch.com/20120209-1reb5phqc8ghj2188g1wbq372c.jpg)  
-[photo by Rachel Kramer](http://www.flickr.com/photos/rkramer62/5126018092)
+(http://img.skitch.com/20120209-1reb5phqc8ghj2188g1wbq372c.jpg)  
 
 I made this theme because I've been rolling my own Drupal theme from scratch for every new site for a while now. And I've used the same tricks over and over enough that it's time to bake them into a base theme. I figured I'd put it in a public repository so you can take a peek or use it for your own project.
 
@@ -46,7 +45,9 @@ John Albin Wilkins
 Jeffrey Zeldman  
 for being really smart and generous, and teaching me a ton, both now and years ago. I would not know anything if it weren't for you all. 
  
- 
+[pony photo by Rachel Kramer](http://www.flickr.com/photos/rkramer62/5126018092)
+
+
 ## Tools ##
 
 Tools you might want to use while building your theme include:  
