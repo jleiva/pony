@@ -53,5 +53,10 @@ for being really smart and generous, and teaching me a ton, both now and years a
 
 ## Tools ##
 
-Tools you might want to use while building your theme include:  
+This theme uses SASS. You can ignore (and delete) the SASS files and edit the CSS files directly instead. Or check out SASS. It's cool.
+http://sass-lang.com
+
+
+Tools you might find handy while building your theme include:  
 http://responsivepx.com  
+
