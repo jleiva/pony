@@ -17,6 +17,9 @@ _This theme REQUIRES the use of the following modules. REQUIRES. Your results wo
 Fences — http://drupal.org/project/fences  
 HTML5 Tools — http://drupal.org/project/html5_tools  
  
+## Pony Admin ##
+
+Pony includes a Pony Admin theme. It's a child of the Seven theme, fixing and overriding a few of the bugs that drive me the nuts. You can read the CSS file to see what it does. 
 
 ## Credits ##
 
