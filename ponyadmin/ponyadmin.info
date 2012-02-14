@@ -1,8 +1,7 @@
 name = Pony Administration
-description = The Seven theme, but better. It's mostly the same, yet fixes a few buggy things. Switch to it by using the drop-down menu below. 
+description = The Seven theme, but better. Mostly the same, Pony Administration fixes a few buggy things. Switch by using the drop-down menu below. 
 core = 7.x
 project = "pony"
-version = "7.x-1.x-dev"
 
 base theme  = seven
 
