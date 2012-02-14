@@ -17,7 +17,7 @@ HTML5 Tools — http://drupal.org/project/html5_tools
  
 ## Pony Admin ##
 
-Pony includes an admin theme. It's a simple child of the Seven theme, that fixes the bugs which drive me nuts and polishes a few visual details. You can read it's CSS file to see what it does. 
+Pony includes an admin theme. It's a simple child of the Seven theme. It fixes the bugs that drive me nuts and polishes a few visual details. You can read it's CSS file to see what it does. 
 
 ## Pony Design Kit ##
 
