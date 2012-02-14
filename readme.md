@@ -21,6 +21,10 @@ HTML5 Tools — http://drupal.org/project/html5_tools
 
 Pony includes a Pony Admin theme. It's a child of the Seven theme, fixing and overriding a few of the bugs that drive me the nuts. You can read the CSS file to see what it does. 
 
+## Pony Design Kit ##
+
+These days, designing in the browser is the best way to finish out a site's design. Present prototype HTML, CSS and JS to your stakeholders, and let them approve working code instead of frozen pdfs of photoshop drawings. Running code is the best way to create responsive designs and see how they will work on various phones and tablets. I don't mean build out Drupal — I mean create flat HTML files with accompanying CSS to prototype the design. Pony comes with files to get you started with this part of the process. Starter HTML that will match much of what Drupal creates for forms and buttons and such, to save you time later. Why handwrite your HTML (or use someone else's starter kit) with classes and ids that do not match Drupal, only to have to refactor everything later. Start with HTML that is Drupal-like, and get a head start on creating your custom Drupal theme.
+
 ## Credits ##
 
 This theme pulls ideas and best practices from all over the web, including these projects:  
