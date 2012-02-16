@@ -103,6 +103,62 @@
 
 
 /**
+ * Override or insert variables into the html template.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered. This is usually "html", but can
+ *   also be "maintenance_page" since zen_preprocess_maintenance_page() calls
+ *   this function to have consistent variables.
+ */
+function pony_preprocess_html(&$variables, $hook) {
+  // Add variables and paths needed for HTML5 and responsive support.
+  $variables['base_path'] = base_path();
+  $variables['path_to_theme'] = drupal_get_path('theme', 'pony');
+
+  // Attributes for html element.
+  $variables['html_attributes_array'] = array(
+    'lang' => $variables['language']->language,
+    'dir' => $variables['language']->dir,
+  );
+
+  // Classes for body element. Allows advanced theming based on context
+  // (home page, node of certain type, etc.)
+  if (!$variables['is_front'] && $hook == 'html') {
+    // Add unique class for each page.
+    $path = drupal_get_path_alias($_GET['q']);
+    // Add unique class for each website section.
+    list($section, ) = explode('/', $path, 2);
+    $arg = explode('/', $_GET['q']);
+    if ($arg[0] == 'node') {
+      if ($arg[1] == 'add') {
+        $section = 'node-add';
+      }
+      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
+        $section = 'node-' . $arg[2];
+      }
+    }
+    $variables['classes_array'][] = drupal_html_class('section-' . $section);
+  }
+}
+
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+function pony_process_html(&$variables, $hook) {
+  // Flatten out html_attributes.
+  $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
+}
+
+
+/**
  * Override or insert variables into the maintenance page template.
  *
  * @param $variables
@@ -152,6 +208,14 @@ function pony_preprocess_page(&$variables, $hook) {
 }
 // */
 
+function pony_preprocess_page(&$variables) {
+  // Get the entire main menu tree
+  $main_menu_tree = menu_tree_all_data('main-menu');
+
+  // Add the rendered output to the $main_menu_expanded variable
+  $variables['main_menu_expanded'] = menu_tree_output($main_menu_tree);
+}
+
 /**
  * Override or insert variables into the node templates.
  *
@@ -160,6 +224,28 @@ function pony_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
+function pony_preprocess_node(&$variables, $hook) {
+  // Add $unpublished variable.
+  $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
+
+  // Add pubdate to submitted variable.
+  $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . $variables['date'] . '</time>';
+  if ($variables['display_submitted']) {
+    $variables['submitted'] = t('!username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['pubdate']));
+  }
+
+  // Add a class for the view mode.
+  if (!$variables['teaser']) {
+    $variables['classes_array'][] = 'view-mode-' . $variables['view_mode'];
+  }
+
+  // Add a class to show node is authored by current user.
+  if ($variables['uid'] && $variables['uid'] == $GLOBALS['user']->uid) {
+    $variables['classes_array'][] = 'node-by-viewer';
+  }
+
+  $variables['title_attributes_array']['class'][] = 'node-title';
+}
 /* -- Delete this line if you want to use this function
 function pony_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
