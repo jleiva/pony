@@ -19,7 +19,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!--[if lt IE 9]>
-  <script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>
+  <script src="<?php print $base_path . $path_to_theme; ?>/js/html5-respond.js"></script>
   <![endif]-->
 
   <script type="text/javascript" src="http://use.typekit.com/usv3xxg.js"></script>
@@ -37,8 +37,8 @@
   <?php print $page_bottom; ?>
 
   <!--[if (lt IE 9) & (!IEMobile)]>
-  <script src="<?php print $base_path; ?>/sites/default/themes/palatinirnet/js/libs/DOMAssistantCompressed-2.8.js"></script>
-  <script src="<?php print $base_path; ?>/sites/default/themes/palatinirnet/js/libs/selectivizr-1.0.1.js"></script>
+  <script src="<?php print $base_path . $path_to_theme; ?>/js/libs/DOMAssistantCompressed-2.8.js"></script>
+  <script src="<?php print $base_path . $path_to_theme; ?>/js/libs/selectivizr-1.0.1.js"></script>
   <![endif]-->
 
   <!-- Prompts all IE6 users to install Google Chromeframe -->
