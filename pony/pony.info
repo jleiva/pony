@@ -20,7 +20,7 @@ core = "7.x"
 ; -----------------------------------------------------------------------------
 
 ; Prevent these Drupal core stylesheets from being used
-stylesheets[all][] = css/system.menu.css
+stylesheets[all][] = css/disable/system.menu.css
 
 ; Now load these stylesheets from this theme
 stylesheets[all][] = css/html.css
