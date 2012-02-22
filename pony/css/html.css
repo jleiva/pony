@@ -1,0 +1,274 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000322}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000331}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000334}}
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000340}}
+html {
+  overflow-y: scroll;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000350}}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000355}}
+b,
+strong {
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000359}}
+i,
+em {
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000363}}
+sup,
+sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000368}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000371}}
+sub {
+  bottom: -0.25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000374}}
+address {
+  font-style: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000377}}
+pre {
+  margin-bottom: 1.5em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000383}}
+small {
+  font-size: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000389}}
+img {
+  max-width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000393}}
+figure {
+  margin-bottom: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\0000398}}
+figure img,
+figure object,
+figure embed {
+  margin-bottom: .75em;
+  max-width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003102}}
+figcaption {
+  display: block;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003109}}
+button, input[type="reset"], input[type="submit"], input[type="button"] {
+  margin-right: 0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003112}}
+label {
+  display: block;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003116}}
+.form-required {
+  font-size: 80%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003119}}
+.form-item, .form-actions {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003123}}
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003130}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.4em;
+  width: 100%;
+  font-size: .875em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003138}}
+th {
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003141}}
+th, td, caption {
+  padding: .25em 10px .25em 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003144}}
+tfoot {
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003147}}
+caption {
+  background-color: transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003153}}
+.clearfix {
+  zoom: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003157}}
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003163}}
+.clearfix:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003169}}
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003173}}
+::-webkit-input-placeholder {
+  padding: 10px;
+  font-size: .875em;
+  line-height: 1.4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003178}}
+input:-moz-placeholder {
+  padding: 10px;
+  font-size: .875em;
+  line-height: 1.4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003184}}
+.ie7 img,
+.iem7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003189}}
+div,
+input,
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003196}}
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003205}}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003210}}
+.visuallyhidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  border: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003222}}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+  margin: 0;
+  width: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/html\.scss}line{font-family:\00003231}}
+.invisible {
+  visibility: hidden;
+}

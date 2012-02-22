@@ -51,6 +51,7 @@ stylesheets[all][] = css/print.css
 ;scripts[] = js/libs/ios-viewport-scaling-bug-fix.js
 ;scripts[] = js/libs/imgsizer.js
 ;scripts[] = js/libs/320andup_helper.js
+
 scripts[] = js/libs/jquery.formalize.min.js
 scripts[] = js/libs/jquery.widowFix-1.3.1.min.js
 scripts[] = js/script.js

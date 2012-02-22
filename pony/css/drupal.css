@@ -1,6 +1,5 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/drupal\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/drupal\.scss}line{font-family:\0000310}}
 .overlay-modal-background {
-  /*  background: transparent url(images/overlay-background.png) repeat; */
   background-image: none;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
