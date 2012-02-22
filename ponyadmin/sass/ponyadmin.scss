@@ -43,7 +43,10 @@ div.description,
 // OVERLAY ADJUSTMENTS
 // ----------------------------------------------------------------
 
+// Making the overlay always be at least a certain height.
 #overlay-content {
   min-height: 250px;
-} // Making the overlay always be at least a certain height.
-
+} 
+h1#overlay-title { 
+  background: rgba(0,0,0,0.5);
+}

@@ -43,7 +43,12 @@ div.description,
   font-size: 0.8em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000347}}
 #overlay-content {
   min-height: 250px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/ponyadmin\/sass\/ponyadmin\.scss}line{font-family:\0000350}}
+h1#overlay-title {
+  background: rgba(0, 0, 0, 0.5);
 }
