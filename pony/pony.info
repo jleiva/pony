@@ -24,6 +24,7 @@ stylesheets[all][] = css/disable/system.menu.css
 stylesheets[all][] = css/disable/system.messages.css
 
 ; Now load add our stylesheets.
+stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/html.css
 stylesheets[all][] = css/drupal.css
 stylesheets[all][] = css/layout.css
@@ -53,7 +54,7 @@ stylesheets[all][] = css/print.css
 ;scripts[] = js/libs/320andup_helper.js
 
 scripts[] = js/libs/jquery.formalize.min.js
-scripts[] = js/libs/jquery.widowFix-1.3.1.min.js
+scripts[] = js/libs/jquery.widowFix-1.3.2.min.js
 scripts[] = js/script.js
 
 
