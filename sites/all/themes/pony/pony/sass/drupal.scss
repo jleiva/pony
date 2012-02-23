@@ -1,0 +1,18 @@
+
+// Drupal Overlay 
+// ----------------------------------------------------------------
+
+// Adjust the background color for the Drupal administration overlay
+// You can replace the overlay-background.png, or set this to no image and use a background color.
+// Drupal core developers believe using an image instead of a CSS color makes the overlay faster.
+// I like using CSS to decide what color to use. Perhaps to be replaced with an image later.
+
+.overlay-modal-background {
+  // background-image: url(../images/overlay-background.png);
+  background-image: none;
+  background: rgba(0,0,0,0.5);
+}
+
+
+//  
+// ----------------------------------------------------------------

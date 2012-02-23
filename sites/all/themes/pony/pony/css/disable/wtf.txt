@@ -1,0 +1,5 @@
+Why are there empty CSS files sitting here? (With no matching SASS files?)To save Drupal from making extras http requests. 
+
+Every time you list a css file in a Drupal theme's .info file, Drupal will attempt to load that file instead of loading any file of the same name from Drupal core or from any module. It's a neat trick. Do you hate all the code in system.menus.css? They just list it a file with that name in the .info file, and none of the code from core's system.menus.css will be loaded.
+
+Problem is, apparently if you just list the files, Drupal keep looking for it, making an http request to get the file every time a page is loaded. By listing some empty files here instead, we can prevent that http request. Which makes the site load faster — significantly faster on some devices/browsers.

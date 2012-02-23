@@ -1,0 +1,8 @@
+name = Pony Administration
+description = The Seven theme, but better. Mostly the same, Pony Administration fixes a few buggy things. Switch by using the drop-down menu below. 
+core = 7.x
+project = "pony"
+
+base theme  = seven
+
+stylesheets[all][] = css/ponyadmin.css
