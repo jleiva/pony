@@ -1,6 +1,0 @@
-name = Jen Simmons
-description = a custom theme for jensimmons.com
-screenshot = images/screenshot.gif
-core = "7.x"
-project = "jensimmons"
-engine = phptemplate

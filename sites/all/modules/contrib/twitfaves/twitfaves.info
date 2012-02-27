@@ -1,7 +1,0 @@
-name = TwitFaves
-description = Outputs a sidebar block with a list of favorited tweets.
-core = 7.x
-
-files[] = twitfaves.install
-files[] = twitfaves.module
-files[] = twitfaves.tpl.php
