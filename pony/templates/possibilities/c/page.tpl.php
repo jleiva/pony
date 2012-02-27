@@ -1,8 +1,3 @@
-<div id="cern_global_banner">
-	<p><a href="<?php print $front_page; ?>" title="<?php print t('cern.ch'); ?>" rel="home"><span id="cern_global_banner_cern">CERN</span> <span class="element-invisible">|</span> <span id="cern_global_banner_strap"><?php print t('Exploring the frontiers of knowledge'); ?></span></a></p>
-	<?php print render($page['cern_global_banner']); ?>
-</div>
-
 <div id="page">
   <header id="header" class="clearfix" role="banner">
 
