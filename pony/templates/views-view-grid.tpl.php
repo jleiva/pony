@@ -1,29 +1,25 @@
 <?php
-reset($rows);
-$gridsize = count($rows[0]);
+/**
+ * @file views-view-grid.tpl.php
+ * Default simple view template to display a rows in a grid.
+ *
+ * - $rows contains a nested array of rows. Each row contains an array of
+ *   columns.
+ *
+ * @ingroup views_templates
+ */
 ?>
 <?php if (!empty($title)) : ?>
-  <h3 class='grid-title'><?php print $title; ?></h3>
+  <h3><?php print $title; ?></h3>
 <?php endif; ?>
-<table class="views-view-grid grid-<?php print $gridsize ?>">
-  <tbody>
+<ul class="<?php print $class; ?>"<?php print $attributes; ?>>
     <?php foreach ($rows as $row_number => $columns): ?>
-      <?php
-        $row_class = 'row-' . ($row_number + 1);
-        if ($row_number == 0 && count($rows) > 1) {
-          $row_class .= ' row-first';
-        }
-        elseif (count($rows) == ($row_number + 1)) {
-          $row_class .= ' row-last';
-        }
-      ?>
-      <tr class="<?php print $row_class; ?>">
+      <span class="<?php print $row_classes[$row_number]; ?> clearfix">
         <?php foreach ($columns as $column_number => $item): ?>
-          <td class="<?php print 'col-'. ($column_number + 1); ?>">
-            <div class='grid-item'><?php print $item; ?></div>
-          </td>
+          <li class="<?php print $column_classes[$row_number][$column_number]; ?>">
+            <?php print $item; ?>
+          </li>
         <?php endforeach; ?>
-      </tr>
+      </span>
     <?php endforeach; ?>
-  </tbody>
-</table>
+</ul>

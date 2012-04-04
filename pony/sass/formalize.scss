@@ -1,35 +1,11 @@
-.input_tiny {
-  width: 50px;
-}
+//-----------------------------------------------------------------------
+// Formalize
+//-----------------------------------------------------------------------
 
-.input_small {
-  width: 100px;
-}
+// Implementing Form resets from Nathan Smith's Formalize
+// http://formalize.me
+// (I didn't included his javascript (which provides a polyfill for placeholder in old IE)
 
-.input_medium {
-  width: 150px;
-}
-
-.input_large {
-  width: 200px;
-}
-
-.input_xlarge {
-  width: 250px;
-}
-
-.input_xxlarge {
-  width: 300px;
-}
-
-.input_full {
-  width: 100%;
-}
-
-.input_full_wrap {
-  display: block;
-  padding-right: 8px;
-}
 
 input[type="search"]::-webkit-search-decoration {
   display: none;
@@ -81,7 +57,7 @@ input[type="button"] {
   -ms-background-clip: padding-box;
   -o-background-clip: padding-box;
   background-clip: padding-box;
-  background: #dddddd url('../images/formalize/button.png?1298351022') repeat-x;
+  background: #dddddd url('../images/formalize/button.png') repeat-x;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#ffffff, #dddddd);
   background-image: -moz-linear-gradient(#ffffff, #dddddd);
@@ -263,7 +239,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/formalize/select_arrow.gif?1298351050');
+    background-image: url('../images/formalize/select_arrow.gif');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;

@@ -1,0 +1,431 @@
+//-----------------------------------------------------------------------
+// Styling Drupal forms
+//-----------------------------------------------------------------------
+
+.form-item { // Wrapper for a form element (or group of form elements) and its label
+	margin-bottom: 21px;
+	margin-bottom: 2.1rem;
+}
+
+
+// Form styles
+//----------------------------------------------
+
+textarea,
+input[type='date'], 
+input[type='datetime'], 
+input[type='datetime-local'], 
+input[type='email'], 
+input[type='month'], 
+input[type='number'], 
+input[type='password'], 
+input[type='search'], 
+input[type='tel'], 
+input[type='text'], 
+input[type='time'], 
+input[type='url'], 
+input[type='week'] {
+  background-color: #fff;
+	border: 1px solid #bbb;
+	-moz-box-shadow: inset 0 1px 1px #ddd; -webkit-box-shadow: inset 0 1px 1px #ddd;
+	box-shadow: inset 0 1px 1px #ddd;
+	padding: 0.5em 0 0.5em 0.5em;
+	width: 100%;
+	color: #999;
+}
+textarea {
+	min-height: 10em;
+	padding-bottom: 0;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+input:focus, textarea:focus {
+	border-color: rgb(65,65,65);
+	color: rgb(65,65,65);
+	-moz-box-shadow: none; -webkit-box-shadow: none;
+	box-shadow: none;
+}
+.grippie {
+  display: none;
+}
+
+
+// Radio Buttons, Check boxes, and Select Lists
+//----------------------------------------------
+
+input.form-checkbox, 
+input.form-radio {
+  vertical-align: top;
+}
+.form-checkboxes .form-item,
+.form-radios .form-item {
+  margin: 0.3em; 
+}
+.form-type-radio label,
+.form-type-checkboxes label {
+	color: rgb(65,65,65);
+	line-height: 1em;
+	margin-bottom: 1em;
+}
+label.checkradio {
+	color: rgb(65,65,65);
+	line-height: 1em;
+	margin-bottom: 1em;
+}
+label.checkradio span.error {
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+input[type=checkbox] {
+	width: auto;
+	height: auto;
+	position: relative;
+	padding: 0;
+	border: none;
+}
+
+
+// Link Module Fields
+//----------------------------------------------
+
+div.link-field-column .form-text {
+  width: 100%;
+}
+div.link-field-column:first-child {
+  float: left;
+  width: 48%;
+}
+div.link-field-column:last-child {
+  float: right;
+  width: 48%;
+}
+.link-field-subrow .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+// Form Labels
+//----------------------------------------------
+
+.form-item label { // The label for a form element
+  display: block;
+  font-weight: normal;
+	margin-bottom: 0.2em;
+	clear: both;
+}
+.form-item label.option { // The label for a radio button or checkbox
+  display: inline;
+  font-weight: normal;
+	margin-bottom: 0.2em;
+}
+.container-inline div,
+.container-inline label { // Inline labels and form divs
+  display: inline;
+}
+
+
+// Descriptions and Help Text
+//----------------------------------------------
+.form-item .description {
+	width: 100%;
+  margin-top: 0.5em;
+	margin-bottom: 21px;
+	margin-bottom: 2.1rem;
+  font-size: 0.85em;
+	font-style: italic;
+  line-height: 1.4em;
+  color: #818181;
+}
+
+
+// Form Errors and Required fields
+//----------------------------------------------
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error { // Highlight the form elements that caused a form submission error
+	border: 1px solid rgb(255,0,0);
+	color: rgb(65,65,65);
+	-moz-box-shadow: none; -webkit-box-shadow: none;
+	box-shadow: none;
+}
+.form-required { // The part of the label that indicates a required field
+  color: #c00;
+}
+
+// Vertical Tabs
+//----------------------------------------------
+.vertical-tabs-pane .form-item {
+  margin-bottom: 1em;
+}
+
+
+// Field Groups
+//----------------------------------------------
+fieldset  { 
+	display: block;
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+fieldset legend {
+  display: block;
+	margin: 1em 0 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #414141;
+}
+fieldset .fieldset-wrapper { 
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+/* undo this for input filter fieldsets and vertical tabs*/
+fieldset.filter-wrapper,
+.vertical-tabs fieldset {
+	display: block;
+	width: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: auto;
+}
+fieldset.filter-wrapper .fieldset-wrapper,
+.vertical-tabs fieldset .fieldset-wrapper { 
+	border: none;
+}
+
+
+//-----------------------------------------------------------------------
+// Button Styles
+//-----------------------------------------------------------------------
+
+.form-submit { // The submit button
+
+}
+div.submitarea,
+#edit-actions {
+	border-top: 1px solid #ddd;
+	padding-top: 1em;
+	margin-top: 1em;
+	overflow: hidden;
+  clear: both;
+}
+div.submitarea p, 
+#edit-actions p {
+	line-height: 2em;
+	float: left;
+}
+form button, 
+button, input[type="reset"], input[type="submit"], input[type="button"] {
+	margin-right: 0.5em;
+}
+.button, 
+button, 
+input[type="reset"], input[type="submit"], input[type="button"] {
+	padding: 0.5em 1em;
+	color: #fff;
+	background: rgb(77,148,204);
+	font-weight: 700;
+	display: inline-block;
+	border: 1px solid rgb(77,148,204);
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+	z-index: 101;
+	cursor: pointer;
+	box-shadow: none;
+	font-size: 11px;
+	font-size: 1.1rem;
+	width: inherit;
+}
+.button:hover, button:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover, 
+input[type="button"]:hover {
+	background: #fff;
+	color: rgb(37,108,164);
+	text-decoration: none;
+}
+
+
+//-----------------------------------------------------------------------
+// Old IE Fixes 
+//-----------------------------------------------------------------------
+
+.ie6-7 div.submitarea p {
+	line-height: 2.8em;
+}
+
+.ie6-7 label.checkradio {
+	padding-left: 2em;
+	position: relative;
+}
+
+.ie6-7 label.checkradio input {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ie6-7 label.checkradio span.error {
+	position: absolute;
+	top: 0.3em;
+	right: 0;
+}
+
+
+// Input Filter Help Text
+//----------------------------------------------
+.filter-wrapper {
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  font-size: 0.85em;
+  line-height: 1.2em;
+  color: #818181;
+}
+.filter-wrapper .form-item label {
+ margin-right: 1em;
+}
+.tips { // Tips for Drupal's input formats
+
+}
+
+
+// Search Box
+//----------------------------------------------
+#block-search-form { // Wrapper for the search form
+  padding-right: 0.2em;
+}
+.container-inline div.submitarea,  
+.container-inline #edit-actions {
+	border-top: none;
+  clear: none;
+}
+.container-inline input[type='search'] {
+  width: 45%;
+}
+.container-inline .form-submit {
+  margin-left: 2%;
+  width: 45%;
+}
+@media only screen and (min-width: 320px) {
+  .container-inline input[type='search'] {
+    width: 60%;
+  }
+  .container-inline .form-submit {
+    margin-left: 2%;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 360px) {
+  .container-inline input[type='search'] {
+    width: 70%;
+  }
+  .container-inline .form-submit {
+    margin-left: 2%;
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container-inline input[type='search'] {
+    width: 60%;
+  }
+  .container-inline div.submitarea, /* original design code */ 
+  .container-inline #edit-actions {
+    margin-left: 2%;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .container-inline input[type='search'] {
+    width: 65%;
+  }
+  .container-inline div.submitarea, /* original design code */ 
+  .container-inline #edit-actions {
+    margin-left: 2%;
+    width: 20%;
+  }
+}
+
+// For IE 6-8
+.ie6-8 .container-inline input[type='search'] {
+  width: 65%;
+}
+
+.ie6-8 .container-inline .form-submit {
+  margin-left: 2%;
+  width: 25%;
+}
+.ie6-8 .container-inline div.submitarea, /* original design code */ 
+.ie6-8 .container-inline #edit-actions {
+  margin-left: 2%;
+  width: 20%;
+}
+
+
+// Drupal's default login form block
+//----------------------------------------------
+#user-login-form {
+  text-align: left; /* LTR */
+}
+
+
+// Password confirmation
+//----------------------------------------------
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+
+
+//-----------------------------------------------------------------------
+// Some help from the Zen theme 
+//-----------------------------------------------------------------------
+
+// Open ID
+//----------------------------------------------
+// The default styling for the OpenID login link 
+// seems to assume Garland's styling of list items.
+#user-login-form ul { // OpenID creates a new ul above the login form's links.
+  margin-bottom: 0; // Position OpenID's ul next to the rest of the links. 
+}
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link { // The "Log in using OpenID" link.
+  margin-top: 1.5em;
+  margin-left: -20px; // Un-do some of the padding on the ul list. // LTR
+}
+#user-login-form li.user-link { // The "Cancel OpenID login" link.
+  margin-top: 1.5em;
+}
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+// Drupal admin tables
+//----------------------------------------------
+
+// Zen overrides these styles in it's html-reset.css, 
+// but restore them here for the admin section of the site.
+form th {
+  text-align: left; // LTR
+  padding-right: 1em; // LTR
+  border-bottom: 3px solid #ccc;
+}
+form tbody {
+  border-top: 1px solid #ccc;
+}
+form tr.even {
+  background-color: #fff;
+}
+form table .item-list ul {
+  margin: 0;
+}
+
+// Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+td.menu-disabled {
+  background: #ccc;
+}
+

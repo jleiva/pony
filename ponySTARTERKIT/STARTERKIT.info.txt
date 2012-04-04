@@ -1,0 +1,60 @@
+name = STARTERKIT
+description = a custom theme for you, based on Pony.
+screenshot = screenshot.png
+core = "7.x"
+base theme  = pony
+
+
+; -----------------------------------------------------------------------------
+; CSS 
+; -----------------------------------------------------------------------------
+
+; Add responsive layouts
+;stylesheets[all][] = css/layout.css
+
+; General Visual Styling for your site
+;stylesheets[all][] = css/typography.css
+;stylesheets[all][] = css/forms.css
+;stylesheets[all][] = css/navigation.css
+;stylesheets[all][] = css/page.css
+;stylesheets[all][] = css/header.css
+
+; Content-Specific Styling 
+;stylesheets[all][] = css/content-type-1.css
+;stylesheets[all][] = css/content-type-2.css
+;stylesheets[all][] = css/more-stuff.css
+
+; Now consider additional use cases
+;stylesheets[all][] = css/print.css
+;stylesheets[all][] = css/projection.css
+
+
+;Don't worry about having 'too many' stylesheets. Drupal will significantly reduce the number of files once "Aggregate and compress CSS files" is turned on. BE SURE THIS IS TURNED ON on your live production server! Under admin/config/performance. Meanwhile, put your CSS into as many files as you want in order to help you and your team work.
+
+
+
+; -----------------------------------------------------------------------------
+; Javascript
+; -----------------------------------------------------------------------------
+;scripts[] = js/script.js
+
+
+
+; -----------------------------------------------------------------------------
+; Drupal Regions
+; -----------------------------------------------------------------------------
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+
+; The page_top and page_bottom regions are hidden, which means they will not
+; show up on the blocks administration page. But they are required in order for
+; the html.tpl.php to work properly, so do not delete them.
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom

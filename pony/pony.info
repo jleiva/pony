@@ -26,22 +26,31 @@ stylesheets[all][] = css/disable/system.menu.css
 stylesheets[all][] = css/disable/system.messages.css
 
 ; Now load add our stylesheets.
+; Start with a foundation of resets and tools for best practices
 stylesheets[all][] = css/normalize.css
-stylesheets[all][] = css/html.css
-stylesheets[all][] = css/drupal.css
-stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/formalize.css
+stylesheets[all][] = css/html.css
+stylesheets[all][] = css/views.css
 
+; Add responsive layouts
+;stylesheets[all][] = css/layout.css
+
+; General Visual Styling for your site
 stylesheets[all][] = css/typography.css
-stylesheets[all][] = css/forms.css
+stylesheets[all][] = css/drupal.css
+;stylesheets[all][] = css/forms.css
+stylesheets[all][] = css/navigation.css
 stylesheets[all][] = css/page.css
 stylesheets[all][] = css/header.css
-stylesheets[all][] = css/navigation.css
+
+; Content-Specific Styling 
 ;stylesheets[all][] = css/content-type-1.css
 ;stylesheets[all][] = css/content-type-2.css
-;stylesheets[all][] = css/more.css
-stylesheets[all][] = css/print.css
+;stylesheets[all][] = css/more-stuff.css
 
+; Now consider additional use cases
+;stylesheets[all][] = css/print.css
+;stylesheets[all][] = css/projection.css
 
 
 ; -----------------------------------------------------------------------------

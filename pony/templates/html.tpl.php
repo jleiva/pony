@@ -19,9 +19,12 @@
   <!--[if lt IE 9]>
     <script src="<?php print $base_path . $path_to_theme; ?>/js/ie/html5-shiv.js"></script>
   <![endif]-->
+  
+  <!--[if lt IE 9]> <! this one is from Zen. See what John is up to. Shiv + respond? -->
+    <!-- <script src="<?php print $base_path . $path_to_theme; ?>/js/html5-respond.js"></script> -->
+  <![endif]-->
 
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400italic,400,700,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700italic,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Gudea|Crimson+Text' rel='stylesheet' type='text/css'>
 
   <?php print $styles; ?>
   <?php print $scripts; ?>
@@ -29,17 +32,12 @@
 </head>
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <?php if ($skip_link_text && $skip_link_anchor): ?>
-    <div id="skip-link">
-      <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
-    </div>
-  <?php endif; ?>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
   <!--[if (lt IE 9) & (!IEMobile)]>
-    <script src="<?php print $base_path . $path_to_theme; ?>js/ie/imgsizer.js"></script>
+    <script src="<?php print $base_path . $path_to_theme; ?>/js/ie/imgsizer.js"></script>
     <script src="<?php print $base_path . $path_to_theme; ?>/js/ie/selectivizr-min.js"></script>
     <script src="<?php print $base_path . $path_to_theme; ?>/js/ie/jquery-extra-selectors.js"></script>
   <![endif]-->

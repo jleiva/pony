@@ -6,3 +6,5 @@ project = "pony"
 base theme  = seven
 
 stylesheets[all][] = css/ponyadmin.css
+
+settings[shortcut_module_link]    = 1

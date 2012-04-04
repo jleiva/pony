@@ -1,396 +1,150 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\000035}}
 html {
-  font: 100%/1.6em Verdana, Arial, serif;
-  color: #56757C;
+  font-family: 'Gudea', 'Trebuchet MS', Arial, sans-serif;
+  line-height: 1.8em;
+  color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000310}}
 body {
-  font-size: 0.85em;
-  line-height: 1.9em;
+  font-size: 0.95em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000320}}
 a,
 a:visited {
   outline: none;
-  color: #11AEA6;
+  color: #4b91b7;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000319}}
-a:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000326}}
+a:hover,
+li a.active:hover {
   outline: none;
   color: #889a9f;
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000325}}
-div.footer-inner a,
-div.footer-inner a:visited {
-  color: #ff7e0e;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000332}}
 a:active,
 a:focus {
   outline: none;
-  color: black;
+  color: #000;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000336}}
 a:link {
-  -webkit-tap-highlight-color: #c9f6fe;
+  -webkit-tap-highlight-color: #ffffb3;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000339}}
+li a.active {
+  color: #4eaebb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000342}}
 ::-webkit-selection {
-  background: #c9f6fe;
+  background: #ffffb3;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000346}}
 ::-moz-selection {
-  background: #c9f6fe;
+  background: #ffffb3;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000350}}
 ::selection {
-  background: #c9f6fe;
+  background: #ffffb3;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000360}}
 h1 {
-  font-family: proxima-nova-extra-condensed, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  color: #4B5456;
-  margin: 0.4em -2px 0.15em 0;
-  font-size: 2.4em;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 2em;
+  margin: 0.67em 0;
   line-height: 1.1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000359}}
-h2 {
-  font-family: proxima-nova-extra-condensed, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  color: #50C9DE;
-  margin: 0.3em -2px 0.2em 0;
-  font-size: 1.9em;
-  line-height: 1.2;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000367}}
-hgroup h2 {
-  font-family: proxima-nova, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #839FA5;
-  margin: 0;
-  font-size: 1.5em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000375}}
-h3 {
-  font-family: proxima-nova-extra-condensed, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #354142;
-  margin: 0.4em 0 0.2em 0;
-  font-size: 1.6em;
-  line-height: 1.17;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000383}}
-h4 {
-  font-family: proxima-nova-extra-condensed, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #354142;
-  margin: 0.4em 0 0.2em 0;
-  font-size: 1.4em;
-  line-height: 1.25;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000391}}
-section[role="complementary"] h4 {
-  color: rgba(53, 65, 66, 0.75);
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000398}}
-.wf-loading h1,
-.wf-loading h2,
-.wf-loading h3,
-.wf-loading h4,
-.wf-loading nav[role=navigation] li {
-  visibility: hidden;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003101}}
-h5 {
-  margin: 2em 0 0.5em;
-  text-transform: uppercase;
-  font-size: 0.8em;
   font-weight: normal;
-  letter-spacing: 0.2em;
-  color: #354142;
-  line-height: 1.6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003110}}
-h6 {
-  color: #899a9f;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000367}}
+h2 {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.5em;
+  margin: 0.83em 0;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000374}}
+h3 {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.17em;
+  margin: 0 0 1em;
+  line-height: 1.17;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000381}}
+h4 {
   font-size: 1em;
-  line-height: 1.4;
-  margin-top: 1em;
-  margin-bottom: 1px;
+  margin: 1.33em 0;
+  line-height: 1.25;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000387}}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000393}}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
   line-height: 1.6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003118}}
-h6.first {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000399}}
+h1#site-name {
   margin-top: 0;
 }
 
-@media all and (min-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003122}}
-  h1 {
-    font-size: 2.5em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003125}}
-  h2 {
-    font-size: 2.2em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003128}}
-  h3 {
-    font-size: 1.7em;
-  }
-}
-@media all and (min-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003142}}
-  h1 {
-    font-size: 2.8em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003145}}
-  h2 {
-    font-size: 2.2em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003148}}
-  hgroup h2 {
-    font-size: 1.3em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003154}}
-  h4 {
-    font-size: 1.6em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003160}}
-  h6 {
-    font-size: 0.82em;
-  }
-}
-@media all and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003165}}
-  h1 {
-    font-size: 4em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003168}}
-  h2 {
-    font-size: 2.2em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003171}}
-  hgroup h2 {
-    font-size: 1.6em;
-    line-height: 1.2;
-  }
-}
-@media all and (min-width: 1024px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003189}}
-  h1 {
-    font-size: 4em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003192}}
-  h2 {
-    font-size: 2.3em;
-  }
-}
-@media all and (min-width: 1280px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003209}}
-  h1 {
-    font-size: 4.4em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003212}}
-  h2 {
-    font-size: 2.4em;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003213}}
 p,
 ol,
 ul,
 dl,
 address {
-  margin-bottom: 1.4em;
+  margin: 0 0 1.4em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003238}}
-.smaller {
-  font-size: 80%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003242}}
-.summary {
-  font-size: 84%;
-  line-height: 1.75;
-  margin: 0.8em 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003247}}
-.main-wrapper .more-link {
-  text-transform: uppercase;
-  font-size: 80%;
-  margin: -1em 0 0 60%;
-  text-align: left;
-}
-
-@media all and (min-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003257}}
-  .bigger {
-    font-size: 1.7em;
-    font-size: 2.1em;
-    line-height: 1.5;
-    line-height: 1.4;
-    font-family: proxima-nova-extra-condensed, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003265}}
-  .bigger p {
-    margin-bottom: 0.7em;
-    margin-bottom: 24px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003269}}
-  .wf-loading .bigger {
-    visibility: hidden;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003272}}
-  .wf-inactive .bigger {
-    font-size: 1.1em;
-    line-height: 1.7;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003276}}
-  .wf-inactive .bigger p {
-    margin-bottom: 1.4em;
-  }
-}
-@media all and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003281}}
-  p {
-    margin-bottom: 1.6em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003284}}
-  small {
-    font-size: 0.8em;
-    line-height: 1.7;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003288}}
-  .bigger {
-    font-size: 2em;
-    line-height: 1.4;
-    font-family: proxima-nova-extra-condensed, Verdana, sans-serif;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003293}}
-  .bigger p {
-    margin-bottom: 0.7em;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003296}}
-  .wf-inactive .bigger {
-    font-size: 1.3em;
-    line-height: 1.7;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003300}}
-  .wf-inactive .bigger p {
-    margin-bottom: 1.4em;
-  }
-}
-@media all and (min-width: 1024px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003308}}
-  .bigger {
-    font-size: 2.3em;
-    line-height: 1.3;
-  }
-}
-@media all and (min-width: 1280px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003317}}
-  .bigger {
-    font-size: 2.6em;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003217}}
 ul {
   margin: 0 0 1.5em 0;
   padding-left: 1.5em;
-  list-style-image: url("images/list-style.png");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003221}}
 ol {
   margin: 0 0 1.5em 0;
   padding-left: 2.5em;
   list-style-type: decimal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003228}}
 li ul,
 li ol {
   margin: 0;
-  font-size: 1em;
-  /* 16 / 16 = 1 */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003340}}
-.node-type-casestudy div[role="main"] ul,
-.node-type-blog div[role="main"] ul,
-.event div[role="main"] ul,
-.team-member div[role="main"] ul {
-  margin: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003346}}
-.node-type-casestudy div[role="main"] li,
-.node-type-blog div[role="main"] li,
-.event div[role="main"] li,
-.team-member div[role="main"] li {
-  margin-bottom: 0.8em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003351}}
-dl,
-dd {
-  margin-bottom: 1.5em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003354}}
-dt {
-  font-weight: normal;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003232}}
 blockquote {
   margin: 0 0 1.5em 0;
   padding-left: 24px;
@@ -398,39 +152,13 @@ blockquote {
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003364}}
-pre,
-code {
-  font: .875em 'andale mono', 'lucida console', monospace;
-  line-height: 1.5;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003239}}
+hr {
+  height: 1px;
+  border-top: 1px solid #cccccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003368}}
-.superscript {
-  font-size: 70%;
-  vertical-align: top;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003375}}
-.item-list .pager {
-  font-size: 117%;
-  margin-top: 15px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003379}}
-.item-list .pager li {
-  color: #FF7E0E;
-  font-weight: normal;
-  padding: 0.1em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003384}}
-li a.active {
-  color: #FF7E0E;
-  text-decoration: underline;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003271}}
 a.button {
   color: #fff;
   background: #f77708;
@@ -445,29 +173,27 @@ a.button {
   font-size: 0.8em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003404}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003284}}
 a.button:hover {
   background: red;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003415}}
-.field .field-label {
-  font-weight: normal;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003418}}
-.project-planner {
-  display: block;
-  min-height: 30px;
-  background: url("../images/179-notepad.png") left top no-repeat;
-  padding-left: 34px;
-  font-family: proxima-nova-extra-condensed,Helvetica,Arial,sans-serif;
-  font-size: 1.3em;
-  line-height: 1em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/pony\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003427}}
-.wf-inactive .project-planner {
-  font-size: 1.3em;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003312}}
+textarea,
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  font-size: 14px;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
 }

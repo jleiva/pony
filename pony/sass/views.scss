@@ -1,0 +1,51 @@
+//-----------------------------------------------------------------------
+// Views Overrides 
+//-----------------------------------------------------------------------
+// This is for overriding the default CSS for the Views module
+
+// For one, I've eliminated the table-based layout of the "views grid" 
+// and am replacing it with unordered list markup, with some layout CSS
+
+
+ul.views-view-grid {
+  padding-left: 0;
+  list-style: none;
+  list-style-image: none;
+}
+ul.views-view-grid li {
+  float: left;
+  padding: 0 0.5em;
+}
+ul.views-view-grid li.col-first {
+  padding-left: 0;
+}
+ul.views-view-grid li.col-last {
+  padding-right: 0;
+}
+.view ul.cols-2 li {
+  width: 50%;
+}
+.view ul.cols-3 li {
+  width: 33.3333%;
+}
+.view ul.cols-4 li {
+  width: 25%;
+}
+.view ul.cols-5 li {
+  width: 20%;
+}
+.view ul.cols-6 li {
+  width: 16.6666%;
+}
+.view ul.cols-7 li {
+  width: 14.2857%;
+}
+.view ul.cols-8 li {
+  width: 12.5%;
+}
+.view ul.cols-9 li {
+  width: 11.1111%;
+}
+.view ul.cols-10 li {
+  width: 10%;
+}

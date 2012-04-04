@@ -1,0 +1,371 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000314}}
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000320}}
+  .inner {
+    max-width: 1100px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000324}}
+.ie6-8 .inner {
+  width: 960px;
+}
+
+/*
+ * Header
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000331}}
+.header-inner {
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000334}}
+.region-header {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  right: 0;
+}
+
+/*
+ * Main (container for everything else)
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000344}}
+#main {
+  position: relative;
+}
+
+/*
+ * Content
+ */
+@media screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000353}}
+  #content,
+  .no-sidebars #content {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    /* LTR */
+    width: 100%;
+    margin-left: 0;
+    /* LTR */
+    margin-right: -100%;
+    /* LTR */
+    /* Negative value of #content's width + left margin. */
+    padding: 0;
+    /* IE6-7 don't support "box-sizing: border-box". If you add
+       padding or borders to this column, you need to add a special
+       IE6-7 rule so the layout doesn't break. For example, see the
+       .ie6-7 .region-sidebar-first rule below */
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000368}}
+  .sidebar-first #content {
+    width: 65%;
+    /* 760px */
+    margin-left: 35%;
+    /* LTR */
+    /* The width of .region-sidebar-first. */
+    /* 200px */
+    margin-right: -100%;
+    /* LTR */
+    /* Negative value of #content's width + left margin. */
+    /* -960px */
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000374}}
+  .sidebar-second #content {
+    width: 60%;
+    margin-left: 0;
+    /* LTR */
+    margin-right: -60%;
+    /* LTR */
+    /* Negative value of #content's width + left margin. */
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000380}}
+  .two-sidebars #content {
+    width: 40%;
+    margin-left: 30%;
+    /* LTR */
+    /* The width of .region-sidebar-first */
+    margin-right: -80%;
+    /* LTR */
+    /* Negative value of #content's width + left margin. */
+  }
+}
+/* Repeating ourselves for old versions of Internet Explorer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\0000388}}
+.ie6-8 #content,
+.ie6-8 .no-sidebars #content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  /* LTR */
+  width: 100%;
+  margin-left: 0;
+  /* LTR */
+  margin-right: -100%;
+  /* LTR */
+  /* Negative value of #content's width + left margin. */
+  padding: 0;
+  /* IE6-7 don't support "box-sizing: border-box". If you add
+     padding or borders to this column, you need to add a special
+     IE6-7 rule so the layout doesn't break. For example, see the
+     .ie6-7 .region-sidebar-first rule below */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003103}}
+.ie6-8 .sidebar-first #content {
+  width: 65%;
+  /* 760px */
+  margin-left: 35%;
+  /* LTR */
+  /* The width of .region-sidebar-first. */
+  /* 200px */
+  margin-right: -100%;
+  /* LTR */
+  /* Negative value of #content's width + left margin. */
+  /* -960px */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003109}}
+.ie6-8 .sidebar-second #content {
+  width: 60%;
+  margin-left: 0;
+  /* LTR */
+  margin-right: -60%;
+  /* LTR */
+  /* Negative value of #content's width + left margin. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003115}}
+.ie6-8 .two-sidebars #content {
+  width: 40%;
+  margin-left: 30%;
+  /* LTR */
+  /* The width of .region-sidebar-first */
+  margin-right: -80%;
+  /* LTR */
+  /* Negative value of #content's width + left margin. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003124}}
+#content,
+.region-sidebar-first,
+.region-sidebar-second {
+  margin-top: 50px;
+  margin-top: 5rem;
+  margin-bottom: 30px;
+  margin-bottom: 3rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003132}}
+.region-sidebar-first,
+.region-sidebar-second {
+  margin-bottom: 30px;
+  /* prevents the sidebar content from touching the footer */
+  margin-bottom: 3rem;
+  /* prevents the sidebar content from touching the footer */
+}
+
+/*
+ * First sidebar
+ */
+@media screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003142}}
+  .region-sidebar-first {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    /* LTR */
+    width: 30%;
+    margin-left: 0;
+    /* LTR */
+    margin-right: -30%;
+    /* LTR */
+    /* Negative value of .region-sidebar-first's width + left margin. */
+    padding: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003153}}
+  .two-sidebars .region-sidebar-first {
+    width: 20%;
+    margin-left: 0;
+    /* LTR */
+    margin-right: -20%;
+    /* LTR */
+    /* Negative value of .region-sidebar-first's width + left margin. */
+  }
+}
+/* Repeating ourselves for old versions of Internet Explorer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003160}}
+.ie6-8 .region-sidebar-first {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  /* LTR */
+  width: 30%;
+  margin-left: 0;
+  /* LTR */
+  margin-right: -30%;
+  /* LTR */
+  /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003171}}
+.ie6-8 .two-sidebars .region-sidebar-first {
+  width: 20%;
+  margin-left: 0;
+  /* LTR */
+  margin-right: -20%;
+  /* LTR */
+  /* Negative value of .region-sidebar-first's width + left margin. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003176}}
+.ie6-7 .region-sidebar-first {
+  width: 20%;
+  /* So we have to subtract any left/right padding or borders from the width. */
+}
+
+/*
+ * Second sidebar
+ */
+@media screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003185}}
+  .region-sidebar-second {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    /* LTR */
+    width: 30%;
+    margin-left: 70%;
+    /* LTR */
+    /* Width of content + sidebar-first. */
+    margin-right: -100%;
+    /* LTR */
+    /* Negative value of .region-sidebar-second's width + left margin. */
+    padding: 0;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003196}}
+  .two-sidebars .region-sidebar-second {
+    width: 20%;
+    margin-left: 80%;
+    /* LTR */
+    /* Width of content + sidebar-first. */
+    margin-right: -100%;
+    /* LTR */
+    /* Negative value of .region-sidebar-second's width + left margin. */
+  }
+}
+/* Repeating ourselves for old versions of Internet Explorer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003203}}
+.ie6-8 .region-sidebar-second {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  /* LTR */
+  width: 30%;
+  margin-left: 70%;
+  /* LTR */
+  /* Width of content + sidebar-first. */
+  margin-right: -100%;
+  /* LTR */
+  /* Negative value of .region-sidebar-second's width + left margin. */
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003214}}
+.ie6-8 .two-sidebars .region-sidebar-second {
+  width: 20%;
+  margin-left: 80%;
+  /* LTR */
+  /* Width of content + sidebar-first. */
+  margin-right: -100%;
+  /* LTR */
+  /* Negative value of .region-sidebar-second's width + left margin. */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003219}}
+.ie6-7 .region-sidebar-second {
+  width: 20%;
+  /* So we have to subtract any left/right padding or borders from the width. */
+}
+
+/*
+ * Footer
+ */
+/*
+ * Page bottom
+ */
+/*
+ * Prevent overflowing content
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003245}}
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word;
+  /* A very nice CSS3 property */
+}
+
+/*
+ * CSS targeted specifically for Internet Explorer 6 for Windows.
+ *
+ * Any CSS in this file will override the rules specified in the ie.css file.
+ *
+ * References:
+ * 1. http://www.positioniseverything.net/explorer/doubled-margin.html
+ * 2. http://browservulsel.blogspot.com/2005/04/ie-overflow-auto-scrollbar-overlap.html
+ * 3. http://www.howtocreate.co.uk/wrongWithIE/?chapter=overflow%3Avisible%3B
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/layout\.scss}line{font-family:\00003263}}
+.ie6 #content,
+.ie6 #navigation,
+.ie6 .region-sidebar-first,
+.ie6 .region-sidebar-second {
+  display: inline;
+  /* display inline or double your floated margin! [1] */
+  overflow: hidden;
+  /* in IE6, overflow auto is broken [2] and so is overflow visible [3] */
+  overflow-y: visible;
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page {
+  overflow-y: hidden;
+}
+*/

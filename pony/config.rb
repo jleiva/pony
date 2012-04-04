@@ -21,8 +21,7 @@ javascripts_dir = "js"
 
 
 # Require any additional compass plugins here.
-#require 'ninesixty'
-#require 'zen-grids'
+#require 'examplething'
 
 
 

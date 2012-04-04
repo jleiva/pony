@@ -47,7 +47,13 @@ div.description,
 #overlay-content {
   min-height: 250px;
 } 
-h1#overlay-title { 
-  background: rgba(0,0,0,0.5);
-  padding: 0.3em 0.3em;
+
+
+// CONTEXT MODULE
+// ----------------------------------------------------------------
+
+// Context, I love you, but I've always wanted to kill you for making the list of contexts to choose from this tiny box with lots of scrolling. Cut it the fuck out.
+#context-blockform .context-blockform-selector {
+  height: 100%;
 }
+
