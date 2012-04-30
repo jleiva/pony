@@ -75,7 +75,7 @@ scripts[] = js/jquery.formalize.min.js
 scripts[] = js/jquery.widowFix-1.3.2.min.js
 
 ; Glue code: adjusting the settings on the above libraries, or quick custom javascript for your project
-;scripts[] = js/script.js
+;scripts[] = js/scripts.js
 
 
 
