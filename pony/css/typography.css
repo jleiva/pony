@@ -1,6 +1,6 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\000035}}
 html {
-  font-family: 'Gudea', 'Trebuchet MS', Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.8em;
   color: #333;
 }
@@ -63,32 +63,29 @@ li a.active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000360}}
 h1 {
-  font-family: 'Crimson Text', Georgia, serif;
   font-size: 2em;
   margin: 0.67em 0;
   line-height: 1.1;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000366}}
 h2 {
-  font-family: 'Crimson Text', Georgia, serif;
   font-size: 1.5em;
   margin: 0.83em 0;
   line-height: 1.2;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000372}}
 h3 {
-  font-family: 'Crimson Text', Georgia, serif;
   font-size: 1.17em;
   margin: 0 0 1em;
   line-height: 1.17;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000378}}
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
@@ -96,7 +93,7 @@ h4 {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000384}}
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
@@ -104,25 +101,30 @@ h5 {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000390}}
 h6 {
   font-size: 0.75em;
   margin: 2.33em 0;
   line-height: 1.6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\0000396}}
 h1#site-name {
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003210}}
 p,
 ol,
 ul,
 dl,
 address {
   margin: 0 0 1.4em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003213}}
+p:last-child {
+  margin-bottom: 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jensimmons\/Sites\/annenberg\/metabolic\/sites\/all\/themes\/pony\/pony\/sass\/typography\.scss}line{font-family:\00003217}}
@@ -195,5 +197,4 @@ input[type='time'],
 input[type='url'],
 input[type='week'] {
   font-size: 14px;
-  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
 }

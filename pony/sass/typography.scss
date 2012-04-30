@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------
 
 html { 
-	font-family: 'Gudea', 'Trebuchet MS', Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.8em;
   color:#333; 
 }
@@ -58,21 +58,18 @@ li a.active {
 //-----------------------------------------------------------------------
 
 h1 { 
-  font-family: 'Crimson Text', Georgia, serif;
   font-size: 2em;
   margin: 0.67em 0;
   line-height: 1.1; 
   font-weight: normal;
 }
 h2 { 
-  font-family: 'Crimson Text', Georgia, serif;
   font-size: 1.5em;
   margin: 0.83em 0;
   line-height : 1.2; 
   font-weight: normal;
 }
 h3 { 
-  font-family: 'Crimson Text', Georgia, serif;
   font-size: 1.17em;
   margin: 0 0 1em;
   line-height : 1.17; 
@@ -213,6 +210,9 @@ dl,
 address { 
   margin: 0 0 1.4em 0;
 }
+p:last-child {
+  margin-bottom: 0;
+}
 
 ul { 
   margin: 0 0 1.5em 0;
@@ -311,6 +311,5 @@ input[type='time'],
 input[type='url'], 
 input[type='week'] {
 	font-size: 14px;
-  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
 }
 

@@ -24,8 +24,6 @@
     <!-- <script src="<?php print $base_path . $path_to_theme; ?>/js/html5-respond.js"></script> -->
   <![endif]-->
 
-  <link href='http://fonts.googleapis.com/css?family=Gudea|Crimson+Text' rel='stylesheet' type='text/css'>
-
   <?php print $styles; ?>
   <?php print $scripts; ?>
 

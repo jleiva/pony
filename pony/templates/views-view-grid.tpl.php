@@ -1,14 +1,3 @@
-<?php
-/**
- * @file views-view-grid.tpl.php
- * Default simple view template to display a rows in a grid.
- *
- * - $rows contains a nested array of rows. Each row contains an array of
- *   columns.
- *
- * @ingroup views_templates
- */
-?>
 <?php if (!empty($title)) : ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
